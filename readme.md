@@ -7,8 +7,8 @@ This project implements Simulated Annealing (SA) to optimize part consolidation 
 Project Structure
 
 📁 SA_Part_Consolidation
-│── main.py               # Runs the entire SA optimization
-│── sa_algo.py        # Contains the SA logic
+│── main.py                # Runs the entire SA optimization
+│── sa_algo.py             # Contains the SA logic
 │── cost_function.py       # Defines the cost function
 │── input_data.py          # Stores component details & constraints
 │── results_analysis.py    # Compares SA with future GA implementation (Optional)
