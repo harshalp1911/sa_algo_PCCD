@@ -1,38 +1,73 @@
-Simulated Annealing for Part Consolidation in Additive Manufacturing
+# Simulated Annealing for Part Consolidation in Additive Manufacturing
+## Project Overview
+ > This project implements Simulated Annealing (SA) to optimize part consolidation in Additive Manufacturing (AM). The goal is to minimize the number of parts while satisfying constraints like relative motion, material compatibility, and size limitations. In future work, a Genetic Algorithm (GA) will be implemented for comparative analysis.
 
-Project Overview
+## Project Structure 📋
+```
+📁 SA_Part_Consolidation  
+│── main.py               # Runs the entire SA optimization  
+│── sa_algorithm.py        # Contains the SA logic  
+│── cost_function.py       # Defines the cost function  
+│── input_data.py          # Stores component details & constraints  
+│── README.md              # Project description & usage  
+```
 
-This project implements Simulated Annealing (SA) to optimize part consolidation in Additive Manufacturing (AM). The goal is to minimize the number of parts while satisfying constraints like relative motion, material compatibility, and size limitations. In future work, a Genetic Algorithm (GA) will be implemented for comparative analysis.
+## Output 📈
 
-Project Structure
+``1.  Displays the optimized part consolidation.``
 
-📁 SA_Part_Consolidation
-│── main.py                # Runs the entire SA optimization
-│── sa_algo.py             # Contains the SA logic
-│── cost_function.py       # Defines the cost function
-│── input_data.py          # Stores component details & constraints
-│── results_analysis.py    # Compares SA with future GA implementation (Optional)
-│── README.md              # Project description & usage
+``2. Shows the number of parts before and after optimization.``
 
-How It Works
+``3. Indicates if early stopping occurred.``
 
-Input Data:
+## Installation & Usage📂
+### Requirements
 
-Define the list of parts and their interaction strengths.
+``Ensure you have Python installed along with the required libraries:``
 
-Store constraints (e.g., motion restrictions, material compatibility, size limits).
+```
+pip install numpy
+```
 
-Simulated Annealing Process:
+### Run the Optimization 
 
-Initialize: Start with each part separate.
+Execute the main script:
+```bash
+python main.py
+ ```
 
-Cost Function: Evaluates the quality of a solution.
+### Expected Output Format:
+```python
+Initial Part Count: 10  
+Optimized Part Count: 5  
+Optimized Consolidation: [('Pedal', 'Lever'), ('Shaft', 'Right Case'), ('Pins', 'Bearing')]  
+Stopping early at iteration 243, no improvement for 50 steps.
+```
 
-Neighbor Generation: Randomly merges parts to explore new solutions.
 
-Acceptance Criteria: Accepts new solutions based on temperature.
+### Future Work
 
-Cooling Schedule: Gradually lowers temperature to refine the solution.
+> * Implement Genetic Algorithm (GA) for comparison.
 
-Early Stopping: Stops when no improvement occurs for a set number of iterations.
+>* Integrate CAD data extraction for automatic FPI network generation.
 
+> * Improve visualization with plots (cost vs. iteration, part groupings).
+
+## Contributors
+
+ Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+
+@ Harshal Patil
+
+
+
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
